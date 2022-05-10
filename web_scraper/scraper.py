@@ -9,3 +9,4 @@ def get_citations_needed_count(url):
   """
   page = requests.get(url)
   soup = BeautifulSoup(page.content, 'html.parser')
+  results = soup.find_all(title='Wikipedia:Citation needed')
