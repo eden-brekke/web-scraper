@@ -30,14 +30,11 @@ def get_citations_needed_report(url):
   # so many parents!
   for result in results:
     text_cites_needed_for.append(result.parent.parent.parent.text)
+
     
   print("The follow text needs citation verification")
-  items = []
   for item in text_cites_needed_for:
-    items.append(item)
     print(item)
-    
-  return items
 
   
   
