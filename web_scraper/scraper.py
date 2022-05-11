@@ -17,10 +17,11 @@ def get_citations_needed_count(url):
     counter +=1
     
   print(f"The Wikipedia page at url: {url} needs {counter} citations!")
+  return counter
   
 def get_citations_needed_report(url):
   """ 
-  Function that will report the text in which the citation is needed for! 
+  Function that will take in a URL then report the text in which the citation is needed for! 
   """
   page = requests.get(url)
   soup = BeautifulSoup(page.content, 'html.parser')
